@@ -53,10 +53,13 @@
 			if (this.options.portrait) {
 				var img = this.options.portrait;
 				var imgId = "img_" + time;
-				$barrager.append("<a class='portrait' id='" + imgId + "'href='javascript:;'></a>");
 				var $img = $("<img src='' alt='' >");
-				$(id + " .barrager .portrait").append($img);
-				$img.attr("src", img);
+				$img.load(function() {
+					$barrager.append("<a class='portrait' id='" + imgId + "'href='javascript:;'></a>");
+					$(id + " .barrager .portrait").append($img);
+				}).error(function() {
+					console.log("图片加载不出来");
+				}).attr("src",img);
 			}
 			// 添加信息
 			$barrager.append("<div class='content'></div>");

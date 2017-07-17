@@ -1,7 +1,5 @@
 # Barrager
 Barrager
-## 插件初体验
-第一次尝试写插件，还有很多需要改善的地方
 ### 调用方法
 - 无参调用:
 $(selector).barragers();

@@ -1,5 +1,5 @@
 # Barrager
-Barrager
+之前看到的一个弹幕的插件，学着码一个，仅学习参考
 ### 调用方法
 - 无参调用:
 $(selector).barragers();
